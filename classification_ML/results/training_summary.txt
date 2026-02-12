@@ -1,0 +1,66 @@
+
+MACHINE LEARNING CLASSIFICATION - FINAL SUMMARY
+================================================================================
+
+DATASET INFORMATION
+-------------------
+Total Samples: 60,175
+Training Samples: 48,140 (80%)
+Test Samples: 12,035 (20%)
+Number of Classes: 8
+Classes: bio, cs, econ, engineering, math, other, physics, stat
+
+FEATURE EXTRACTION
+------------------
+Method: TF-IDF (Term Frequency-Inverse Document Frequency)
+Preprocessing: Advanced Text Cleaning (LaTeX removal, normalization)
+Features: Combined title + abstract
+Vocabulary Size: 10,000
+
+MODELS TRAINED
+--------------
+4 models trained and evaluated:
+  • Logistic Regression
+  • Linear SVM
+  • Naive Bayes
+  • Random Forest
+
+MODEL PERFORMANCE
+-----------------
+              Model  Accuracy  Precision   Recall  F1-Score
+Logistic Regression  0.784213   0.784466 0.784213  0.783846
+         Linear SVM  0.774408   0.774222 0.774408  0.774073
+        Naive Bayes  0.762027   0.762664 0.762027  0.761593
+      Random Forest  0.657914   0.695553 0.657914  0.653461
+
+BEST PERFORMING MODEL
+---------------------
+Model: Logistic Regression
+Accuracy: 0.7842
+Precision: 0.7845
+Recall: 0.7842
+F1-Score: 0.7838
+
+FILES GENERATED
+---------------
+Models:
+  ✓ 6 model files saved in 'models/'
+  ✓ (Models are saved as complete Pipelines including preprocessing)
+
+Results:
+  ✓ model_comparison.csv - Performance metrics for all models
+  ✓ model_comparison.png - Visual comparison of models
+  ✓ classification_report_best_model.csv - Detailed per-class metrics
+  ✓ confusion_matrix_best_model.png - Confusion matrix visualization
+  ✓ per_class_performance.png - Per-class performance chart
+
+DEPLOYMENT
+----------
+To use the trained model for predictions:
+  1. Load pipeline: model = joblib.load('models/logistic_regression.pkl')
+  2. Prepare text: text = "your title + your abstract"
+  3. Predict: prediction = model.predict([text])
+  (Note: The pipeline handles all preprocessing and vectorization automatically)
+
+================================================================================
+Summary generated: 2026-02-04 09:03:12

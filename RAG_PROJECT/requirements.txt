@@ -1,0 +1,54 @@
+# ============================
+# Streamlit UI
+# ============================
+streamlit==1.32.2
+
+# ============================
+# Data Handling
+# ============================
+numpy==1.26.4
+pandas==2.2.1
+
+# ============================
+# Vector Search
+# ============================
+faiss-cpu==1.7.4
+
+# ============================
+# PDF Processing
+# ============================
+pypdf==4.2.0
+langchain-community==0.2.7
+
+# ============================
+# Google Gemini (Embeddings + LLM)
+# ============================
+google-genai==1.7.0
+
+# ============================
+# Networking
+# ============================
+requests==2.31.0
+
+# ============================
+# ML / DL Inference (ONLY if needed)
+# ============================
+#onnxruntime==1.17.3
+#scikit-learn==1.4.1.post1
+
+# ============================
+# AI Services (AWS + Google)
+# ============================
+# REQUIRED for AWS Bedrock Embeddings
+boto3==1.42.36
+
+# ============================
+# Utilities
+# ============================
+tqdm==4.66.2
+
+GOOGLE_API_KEY='AIzaSyDfCIZG9AFm1LpTgdrwP637y1ROOQmE560'
+
+scikit-learn==1.4.1.post1 
+
+joblib==1.3.2

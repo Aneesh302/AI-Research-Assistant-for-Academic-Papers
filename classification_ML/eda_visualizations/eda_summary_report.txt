@@ -1,0 +1,86 @@
+
+EXPLORATORY DATA ANALYSIS SUMMARY REPORT
+================================================================================
+
+DATASET OVERVIEW
+----------------
+Total Samples: 60,175
+Total Features: 18
+Target Variable: final_category
+Number of Classes: 8
+
+CLASS DISTRIBUTION
+-----------------
+final_category
+bio             5998
+cs             12132
+econ            4968
+engineering     6991
+math           10082
+other           6114
+physics         7987
+stat            5903
+
+Percentage Distribution:
+final_category
+bio             9.967595
+cs             20.161197
+econ            8.255920
+engineering    11.617781
+math           16.754466
+other          10.160366
+physics        13.272954
+stat            9.809722
+
+Class Balance: Balanced
+(Standard deviation of percentages: 4.06%)
+
+TEXT FEATURES STATISTICS
+------------------------
+Abstract Length:
+  Mean: 1052 characters
+  Median: 1047 characters
+  Std Dev: 421 characters
+  Range: 35 - 3800 characters
+
+Title Length:
+  Mean: 78 characters
+  Median: 76 characters
+  Std Dev: 28 characters
+  Range: 4 - 242 characters
+
+MISSING DATA
+------------
+             Missing Count  Percentage
+report-no            58425   97.091816
+journal-ref          47432   78.823432
+doi                  42782   71.095970
+comments             23633   39.273785
+license               4169    6.928126
+submitter               97    0.161197
+
+KEY FEATURES FOR MODELING
+-------------------------
+- Primary text feature: 'abstract' (no missing values, avg ~1,052 chars)
+- Secondary text feature: 'title' (only 97 missing, avg ~78 chars)
+- Both features provide rich textual information for classification
+
+RECOMMENDATIONS FOR MODELING
+----------------------------
+1. Use 'abstract' and 'title' as main features (combine them)
+2. Classes are relatively balanced - standard train/test split will work
+3. Consider TF-IDF, Word2Vec, or BERT embeddings for feature extraction
+4. Expected baseline accuracy: ~75-80% (based on class distribution)
+5. Multi-class classification with 8 targets
+6. Use stratified sampling to maintain class balance in train/test splits
+
+VISUALIZATIONS GENERATED
+------------------------
+✓ class_distribution.png - Bar and pie charts of category distribution
+✓ text_length_analysis.png - Text length distributions and box plots
+✓ missing_data.png - Missing data percentages
+✓ wordclouds_by_category.png - Word clouds for each category
+✓ category_mapping_heatmap.png - Primary vs final category relationships
+
+================================================================================
+Report generated: 2026-02-04 02:19:21
